@@ -1,5 +1,5 @@
-SELECT  
---truncate time to day
+#SELECT  
+#--truncate time to day
 date_trunc('day', block_time) AS time,
 -- count distinct addresses that sent a transactions
 COUNT(distinct "from") AS users,
@@ -8,4 +8,4 @@ COUNT(distinct "to") AS receiving_addresses
 FROM ethereum.transactions
 WHERE block_time > DATE '2023-01-01'
 GROUP BY 1
-ORDER BY 1
+#ORDER BY 1
